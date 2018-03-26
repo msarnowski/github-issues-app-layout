@@ -1,0 +1,127 @@
+html, 
+body {
+  height: 100%;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  background: #9ab0c7;
+  background: url(assets/background-progressive.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  max-width: 650px;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px RGBA(0, 0, 0, 0.6);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar,
+.content {  
+  height: 100%;
+}
+
+.sidebar {
+  background: #212435;
+  background: RGBA(16, 16, 34, 0.9);
+  width: 150px;
+  color: white;
+  float: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.statusbar {
+  padding-left: 15px;
+  padding-top: 15px;
+  height: 25px;
+  background: #101022;
+  border-top-left-radius: 10px;
+}
+.statusbar-item {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  float: left;
+  border-radius: 50%;
+}
+.close {
+  background: #fc584e;
+}
+.minimise {
+  background: #f2b21b;
+}
+.fullscreen {
+  background: #00cd46;
+}
+
+.filters li {
+  font-size: 0.875em; /* 14px */
+  line-height: 50px;
+  padding: 0 17px;
+  cursor: pointer;
+}
+.filters .active {
+  background: #292a48;
+}
+.filters img {
+  vertical-align: text-top;
+  margin-right: 10px;
+}
+.count {
+  float: right;
+  color: #8a8995;
+}
+
+
+.content {
+  font-weight: 400;
+  background: #f6f6f6;
+  width: 490px;
+  float: left;
+  overflow: auto;
+  border-right: 10px solid #f6f6f6;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.content li {
+  margin: 5px 10px 5px 15px;
+}
+.content-item {
+  font-size: 0.9375em; /* 15px */
+  background: #fff;
+  padding-left: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  line-height: 38px;
+}
+.favorite {
+  float: right;
+  width: 38px;
+  height: 38px;
+  background-image: url(assets/icon-star-sprite.svg);
+  background-position: top;
+  cursor: pointer;
+}
+.active {
+  background-position: bottom;
+}
+.date {
+  font-size: 0.75em; /* 12px */
+  color: #8a8995;
+  line-height: 2;
+}
