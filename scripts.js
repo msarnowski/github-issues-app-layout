@@ -9,12 +9,14 @@ function setup() {
 }
 
 function switchTo(item, allItems) {
-  for (let oneItem of allItems) {
-    if (oneItem.classList.contains('active')) {oneItem.classList.remove('active');}
+  if (!item.classList.contains('selected')) {
+    for (let oneItem of allItems) {
+      if (oneItem.classList.contains('selected')) {oneItem.classList.remove('selected');}
+    }
+    item.classList.add('selected');
   }
-  item.classList.add('active');
 }
 
 function toggleActive(item) {
-  item.classList.toggle('active');
+  item.classList.toggle('selected');
 }

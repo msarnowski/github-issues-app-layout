@@ -11,6 +11,7 @@ body {
   background: #9ab0c7;
   background: url(assets/background-progressive.jpg);
   background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +20,8 @@ body {
 main {
   width: 100%;
   max-width: 650px;
-  height: 500px;
+  height: 100%;
+  max-height: 500px;
   border-radius: 10px;
   box-shadow: 0 0 20px RGBA(0, 0, 0, 0.6);
 }
@@ -35,16 +37,18 @@ ul {
   height: 100%;
 }
 
+/* ----- Sidebar (left column) ----- */
 .sidebar {
   background: #212435;
-  background: RGBA(16, 16, 34, 0.9);
-  width: 150px;
+  background: RGBA(16, 16, 34, 0.85);
+  width: 23%;
   color: white;
   float: left;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
 
+/* ----- Statusbar (OS buttons) ----- */
 .statusbar {
   padding-left: 15px;
   padding-top: 15px;
@@ -69,29 +73,46 @@ ul {
   background: #00cd46;
 }
 
-.filters li {
+/* ----- Navigation filters ----- */
+.filters-item {
   font-size: 0.875em; /* 14px */
   line-height: 50px;
-  padding: 0 17px;
-  cursor: pointer;
+  padding-left: 17px;
+  padding-right: 32px;
+  transition: background 0.2s linear;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
 }
-.filters .active {
+.filters-item.selected {
   background: #292a48;
 }
-.filters img {
+.filters-item:not(.selected):hover {
+  cursor: pointer;
+  background: #34365C;
+}
+.filters-item:not(.selected):active {
+  background: #101022;
+}
+.filters-item img {
   vertical-align: text-top;
   margin-right: 10px;
 }
 .count {
-  float: right;
   color: #8a8995;
+  position: absolute;
+  top: 0;
+  right: 17px;
 }
 
-
+/* ----- Content (right column) ----- */
 .content {
   font-weight: 400;
   background: #f6f6f6;
-  width: 490px;
+  box-sizing: border-box;
+  width: 77%;
   float: left;
   overflow: auto;
   border-right: 10px solid #f6f6f6;
@@ -115,13 +136,22 @@ ul {
   height: 38px;
   background-image: url(assets/icon-star-sprite.svg);
   background-position: top;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.2s linear;
 }
-.active {
+.favorite:hover {
+  background-color: #f6f6f6;
+}
+.favorite:active {
+  background-color: #e0e0e0;
+}
+.favorite.selected {
   background-position: bottom;
 }
 .date {
   font-size: 0.75em; /* 12px */
   color: #8a8995;
-  line-height: 2;
+  line-height: 1.667;
 }
