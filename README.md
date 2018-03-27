@@ -8,7 +8,7 @@ To center the main "window" horizontally and vertically `dislpay: flexbox` is us
 
 Layout is flexible. It is not truly responsive but it will work well when browser window is smaller than `650px` width and `500px` height. It is done again with Flexbox. The alternative for horizontal scaling will be making columns proportional with percentage width or calculating `.content` (right column) width with CSS calc() function e.g. `calc(100% - 150px)`.
 
-## Scroll bar
+## Scrollbar
 
 On platforms that use static, rectangular scrollbars rounded corners of the main "window" are hidden under, making the corners pointy. To remedy that the scroll bar is offset `10px` to the left. On platforms with transparent, hiding scrollbars the layout is not affected by the offset. The most elegant solution would be making a custom scrollbar.
 
