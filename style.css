@@ -3,21 +3,23 @@ body {
   height: 100%;
 }
 body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.5;
-  margin: 0;
-  background: #9ab0c7;
+  background: #849fb9;
   background: url(assets/background-progressive.jpg);
-  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-size: cover;
 }
 
 main {
+  display: flex;
   width: 100%;
   max-width: 650px;
   height: 100%;
@@ -39,11 +41,13 @@ ul {
 
 /* ----- Sidebar (left column) ----- */
 .sidebar {
-  background: #212435;
-  background: RGBA(16, 16, 34, 0.85);
-  width: 23%;
+  width: 150px;
   color: white;
-  float: left;
+  background: #212435;
+  background-image: linear-gradient(RGBA(16, 16, 34, 0.7), RGBA(16, 16, 34, 0.7)), url(assets/background-blurred.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -57,10 +61,10 @@ ul {
   border-top-left-radius: 10px;
 }
 .statusbar-item {
+  float: left;
   width: 10px;
   height: 10px;
   margin-right: 10px;
-  float: left;
   border-radius: 50%;
 }
 .close {
@@ -75,12 +79,12 @@ ul {
 
 /* ----- Navigation filters ----- */
 .filters-item {
-  font-size: 0.875em; /* 14px */
-  line-height: 50px;
   padding-left: 17px;
   padding-right: 32px;
+  font-size: 0.875em; /* 14px */
+  line-height: 50px;
   transition: background 0.2s linear;
-  
+  /* flexible layout adaptations */
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -102,6 +106,7 @@ ul {
 }
 .count {
   color: #8a8995;
+  /* flexible layout adaptations */
   position: absolute;
   top: 0;
   right: 17px;
@@ -109,12 +114,11 @@ ul {
 
 /* ----- Content (right column) ----- */
 .content {
+  flex-grow: 1;
   font-weight: 400;
-  background: #f6f6f6;
   box-sizing: border-box;
-  width: 77%;
-  float: left;
   overflow: auto;
+  background: #f6f6f6;
   border-right: 10px solid #f6f6f6;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -123,12 +127,18 @@ ul {
   margin: 5px 10px 5px 15px;
 }
 .content-item {
-  font-size: 0.9375em; /* 15px */
-  background: #fff;
   padding-left: 12px;
+  padding-right: 38px;
   border: 1px solid #e0e0e0;
   border-radius: 5px;
+  font-size: 0.9375em; /* 15px */
   line-height: 38px;
+  background: #fff;
+  /* flexible layout adaptations */
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .favorite {
   float: right;
@@ -140,6 +150,9 @@ ul {
   border-bottom-right-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s linear;
+  /* flexible layout adaptations */
+  position: absolute;
+  right: 0;
 }
 .favorite:hover {
   background-color: #f6f6f6;
@@ -151,7 +164,7 @@ ul {
   background-position: bottom;
 }
 .date {
-  font-size: 0.75em; /* 12px */
   color: #8a8995;
+  font-size: 0.75em; /* 12px */
   line-height: 1.667;
 }
