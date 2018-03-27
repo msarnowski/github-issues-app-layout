@@ -44,7 +44,7 @@ ul {
   width: 150px;
   color: white;
   background: #212435;
-  background-image: linear-gradient(RGBA(16, 16, 34, 0.7), RGBA(16, 16, 34, 0.7)), url(assets/background-blurred.jpg);
+  background-image: linear-gradient(RGBA(16, 16, 34, 0.8), RGBA(16, 16, 34, 0.8)), url(assets/background-blurred.jpg);
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

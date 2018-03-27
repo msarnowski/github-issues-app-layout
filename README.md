@@ -6,7 +6,7 @@ Assignment notes
 
 To center the main "window" horizontally and vertically `dislpay: flexbox` is used. If browser compatibility is a concern, `display: table` and additional markup with `display: table-cell` can be used.
 
-Layout is flexible. It is far from being truly responsive but it will work well when browser window is smaller than `650px` width and `500px` height. It is done again with Flexbox. The alternative for horizontal scaling will be making columns proportional with percentage width or calculating `.content` (right column) width with CSS calc() function e.g. `calc(100% - 150px)`.
+Layout is flexible. It is not truly responsive but it will work well when browser window is smaller than `650px` width and `500px` height. It is done again with Flexbox. The alternative for horizontal scaling will be making columns proportional with percentage width or calculating `.content` (right column) width with CSS calc() function e.g. `calc(100% - 150px)`.
 
 ## Scroll bar
 
